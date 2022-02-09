@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>phoenix-web</artifactId>
+    <artifactId>phoenix-service</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -19,7 +19,7 @@
     <dependencies>
         <dependency>
             <groupId>com.phoenix</groupId>
-            <artifactId>phoenix-service</artifactId>
+            <artifactId>phoenix-manager</artifactId>
         </dependency>
     </dependencies>
 
