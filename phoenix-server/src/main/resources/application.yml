@@ -1,0 +1,35 @@
+spring:
+  mvc:
+    throw-exception-if-no-handler-found: true
+  application:
+    name: phoenix-server
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 300MB
+      max-request-size: 300MB
+  main:
+    allow-bean-definition-overriding: true
+
+server:
+  port: 8807
+  servlet:
+    context-path: /courseop
+  tomcat:
+    remoteip:
+      remote-ip-header: x-forwarded-for
+      protocol-header: x-forwarded-proto
+      port-header: X-Forwarded-Port
+    basedir: .
+    access-log:
+      enabled: true
+      pattern: '%{X-Forwarded-For}i %h %l %u %t "%r" %s %b %Dms'
+      directory: log/access/
+      prefix: "access_log"
+      suffix: .log
+      file-date-format: .yyyy-MM-dd
+
+logging:
+  level:
+    io.swagger.models.parameters.AbstractSerializableParameter: error

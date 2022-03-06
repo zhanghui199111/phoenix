@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * author: zhn4528
  * create: 2022/2/10 13:51
 */
-@SpringBootApplication
+@SpringBootApplication(
+        scanBasePackages = "com.mythical.phoenix"
+)
 public class PhoenixServerApplication {
 
     public static void main(String[] args) {
